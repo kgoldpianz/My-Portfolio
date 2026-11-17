@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio Template</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --primary-color: #007acc;
+            --secondary-color: #333333;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #e0e0e0;
+        }
+        .project-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .project-title {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        .project-description {
+            flex-grow: 1;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s ease;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #005999;
+        }
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #555555;
+        }
+        footer {
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 40px;
+            margin-top: 60px;
+        }
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <!-- STEP 1: INPUT STUDENT NAME BELOW -->
+            <h1>KINGSLEY CHIMEZIE NWOBODO</h1>
+            <p>Welcome to my portfolio, where I showcase my data analytics projects, technical skills, and passion for transforming raw data into meaningful insights that drive informed decision-making.</p>
+        </header>
+
+        <main>
+            <div class="projects-grid">
+
+                <!-- ==================== PROJECT 1 ==================== -->
+                <div class="project-card">
+                    <!-- INPUT: Project 1 Image Link (or local path like "images/project1.png") -->
+                    <img src="Images/Executive-dashboard.png.png" alt="Project One Screenshot" class="project-image">
+                    
+                    <div class="project-content">
+                        <!-- INPUT: Project 1 Title -->
+                        <h2 class="project-title">Agricultural Crop Yield Analysis</h2>
+                        
+                        <!-- INPUT: Project 1 Description -->
+                        <p class="project-description">
+                            An agricultural data analytics project exploring factors associated with crop yield across different regions, crop types and environmental conditions. Using Excel and Power BI, the project analyses agricultural data to identify patterns, uncover insights and support data-driven decision-making in agriculture.</p>
+                        
+                        <!-- INPUT: Project 1 GitHub Link -->
+                        <a href="https://github.com/kgoldpianz/Agricultural-crop-yield-analysis" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+
+
+                <!-- ==================== PROJECT 2 ==================== -->
+                <div class="project-card">
+                    <!-- INPUT: Project 2 Image Link -->
+                    <img src="https://img.magnific.com/premium-photo/infographic-showing-electricity-consumption-savings_342166-4084.jpg?semt=ais_hybrid&w=740&q=80" alt="Project Two Screenshot" class="project-image">
+                    
+                    <div class="project-content">
+                        <!-- INPUT: Project 2 Title -->
+                        <h2 class="project-title">Electricity Consumption and Tariff Analysis</h2>
+                        
+                        <!-- INPUT: Project 2 Description -->
+                        <p class="project-description">
+                            An Excel-based data analytics project evaluating household and commercial electricity usage, billing accuracy, and tariff distributions across multiple states. Using relational lookups (XLOOKUP/VLOOKUP), conditional formatting, and data validation, this project audits unit-rate calculations and isolates high-cost tariff segments to uncover consumption patterns and support transparent utility pricing.
+                        </p>
+                        
+                        <!-- INPUT: Project 2 GitHub Link -->
+                        <a href="https://github.com/kgoldpianz/Electricity-Consumption-Analysis-Hands-On" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+
+
+                <!-- ==================== PROJECT 3 ==================== -->
+                <div class="project-card">
+                    <!-- INPUT: Project 3 Image Link -->
+                    <img src="Images/Gemini_Generated_Image_wtfbxjwtfbxjwtfb.jfif" alt="Project Three Screenshot" class="project-image">
+                    
+                    <div class="project-content">
+                        <!-- INPUT: Project 3 Title -->
+                        <h2 class="project-title">SQL Superstore Customer Behavior Analysis</h2>
+                        
+                        <!-- INPUT: Project 3 Description -->
+                        <p class="project-description">
+                        A SQL Server data analytics project exploring customer segmentation, regional reach, and purchasing frequency using the Superstore dataset. Utilizing T-SQL window functions, CTEs, and multi-table joins, the analysis evaluates customer retention rates, high-value spending patterns, and seasonal sales trends. These insights uncover discount impacts on profit margins to guide data-driven retail strategy.   
+                        </p>
+                        
+                        <!-- INPUT: Project 3 GitHub Link -->
+                        <a href="https://github.com/kgoldpianz/SQL-Superstore-Customer-Behavior-Analysis" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+
+
+                <!-- ==================== PROJECT 4 ==================== -->
+                <div class="project-card">
+                    <!-- INPUT: Project 4 Image Link -->
+                    <img src="Images/2Gemini_Generated_Image_mo5nf4mo5nf4mo5n.jfif" alt="Project Four Screenshot" class="project-image">
+                    
+                    <div class="project-content">
+                        <!-- INPUT: Project 4 Title -->
+                        <h2 class="project-title">SQL Ecommerce Database Schema</h2>
+                        
+                        <!-- INPUT: Project 4 Description -->
+                        <p class="project-description">
+                            A foundational SQL Server relational database project establishing a fully structured e-commerce schema. It models core retail entities by defining tables for customers, products, orders, and order details. The script incorporates primary keys, foreign key constraints, and column alterations using SP_RENAME. Initial data insertion scripts are also included to verify relational mappings and data integrity. Ultimately, the project provides a reliable architectural foundation for transactional tracking and retail analytics.  
+                        </p>
+                        
+                        <!-- INPUT: Project 4 GitHub Link -->
+                        <a href="https://github.com/kgoldpianz/SQL-Ecommerce-Database-Schema" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+
+                                <!-- ==================== PROJECT 5 ==================== -->
+                <div class="project-card">
+                    <!-- INPUT: Project 5 Image Link -->
+                    <img src="Images/Bank-customer.png" alt="Project Three Screenshot" class="project-image">
+                    
+                    <div class="project-content">
+                        <!-- INPUT: Project 5 Title -->
+                        <h2 class="project-title">kgoldpianz/Bank Customer Analytics Dashboard</h2>
+                        
+                        <!-- INPUT: Project 5 Description -->
+                        <p class="project-description">
+                            A banking analytics project exploring customer demographics, account balances, and churn behaviors. Using Power BI and SQL, the dashboard visualizes key financial metrics and transaction trends. It tracks customer acquisition rates and service adoption across various branches. Ultimately, the analysis identifies high-risk churn segments to help financial institutions improve retention strategies.
+                       </p>
+                        
+                        <!-- INPUT: Project 5 GitHub Link -->
+                        <a href="https://github.com/kgoldpianz/Bank-Customer-Analytics-Dashboard" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+
+                                                <!-- ==================== PROJECT 6 ==================== -->
+                <div class="project-card">
+                    <!-- INPUT: Project 6 Image Link -->
+                    <img src="Images/Employee DA.jfif" alt="Project Three Screenshot" class="project-image">
+                    
+                    <div class="project-content">
+                        <!-- INPUT: Project 6 Title -->
+                        <h2 class="project-title">Employee Data Analysis</h2>
+                        
+                        <!-- INPUT: Project 6 Description -->
+                        <p class="project-description">
+                            An employee data analysis project involving 200 employee records across different departments. It explores salary distribution, employee demographics, performance ratings, bonus and promotion eligibility, and tax categories to generate useful workforce insights.
+                        </p>
+                        
+                        <!-- INPUT: Project 6 GitHub Link -->
+                        <a href="https://github.com/kgoldpianz/Employee-Data-Analysis-Hands-On" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+
+                                                <!-- ==================== PROJECT 7 ==================== -->
+                <div class="project-card">
+                    <!-- INPUT: Project 7 Image Link -->
+                    <img src="Images/SDM.jfif" alt="Project Three Screenshot" class="project-image">
+                    
+                    <div class="project-content">
+                        <!-- INPUT: Project 7 Title -->
+                        <h2 class="project-title">SQL Student Database Management</h2>
+                        
+                        <!-- INPUT: Project 7 Description -->
+                        <p class="project-description">
+                            A relational SQL database project designed to organize and manage academic records across students, courses, departments, and enrollments. Utilizing primary and foreign key constraints, the schema enforces data integrity while supporting efficient querying of grades, attendance, and faculty assignments. Ultimately, the system streamlines administrative reporting and provides a scalable foundation for institutional academic analytics.
+                        </p>
+                        
+                        <!-- INPUT: Project 7 GitHub Link -->
+                        <a href="https://github.com/kgoldpianz/SQL-Student-Database-Management-Hands-On" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <h2>Connect With Me</h2>
+            <p>Feel free to reach out via any of the professional networks below.</p>
+            <div class="contact-buttons">
+                
+                <!-- INPUT: Student's Main GitHub Profile URL -->
+                <a href="https://github.com/kgoldpianz" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+                
+                <!-- INPUT: Student's Contact Email Address -->
+                <a href="mailto:kgoldpianz31@gmail.com" class="btn btn-secondary">Email Me</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
